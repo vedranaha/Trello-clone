@@ -14,8 +14,9 @@ const Todo = (props) => {
   };
 
   const submitEdit = (event) => {
+    //same as adding a new Todo, in App adding new function and pasing it as props
     event.preventDefault();
-    props.edit(props.id, editText);
+    props.edit(props.id, editText); //added props with id of todo task and edited text
     setEditText("");
     setModoEdit(false);
   };
@@ -28,9 +29,9 @@ const Todo = (props) => {
     <div>
       {!modoEdit ? (
         <div className="Todo">
-          <span>{props.Todo}</span>
-          <span onClick={edit}>edit</span>
-          <span onClick={cleanTodo}>clean</span>
+          <div>{props.Todo}</div>
+          <button onClick={edit}>edit</button>
+          <button onClick={cleanTodo}>clean</button>
         </div>
       ) : (
         <form className="formEdit" onSubmit={submitEdit}>
