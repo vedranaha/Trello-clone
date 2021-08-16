@@ -11,8 +11,8 @@ const TodoForm = (props) => {
   const submit = (event) => {
     event.preventDefault();
     if (inputText.trim() !== "") {
-      props.newTodo(inputText);
-      setInputText("");
+      props.newTodo(inputText); //newTodo=inputText(useState) and now its added to form=>onsubmit....
+      setInputText(""); //its empty when new todo is added
     }
   };
 
