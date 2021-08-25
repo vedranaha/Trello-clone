@@ -19,9 +19,9 @@ const TodoForm = (props) => {
   return (
     <div>
       <form className="form" onSubmit={submit}>
-        <span>Add Todo</span>
+        <header>Todo list</header>
         <input value={inputText} onChange={manageForm} />
-        <button>Add</button>
+        <button>Add a new task</button>
       </form>
     </div>
   );

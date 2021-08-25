@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import TodoForm from "./components/Todoform";
-import Todo from "./components/Todo";
+import Card from "./components/Card";
 import "./App.css";
 
 function App() {
   const [listTodos, setListTodos] = useState([]);
 
-  const newTodo = (todo) => {
-    setListTodos([todo, ...listTodos]);
+  const newTodo = (card) => {
+    setListTodos([card, ...listTodos]);
   };
 
   const clean = (id) => {
@@ -15,10 +15,10 @@ function App() {
     setListTodos(listFiltered);
   };
 
-  const updateTodo = (id, todo) => {
+  const updateTodo = (id, card) => {
     const listUpdated = listTodos.map((e, index) => {
       if (index === id) {
-        e = todo;
+        e = card;
       }
 
       return e;
@@ -29,12 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <TodoForm newTodo={newTodo} />
-
       <div className="list">
-        <header>Todo list</header>
+        <TodoForm newTodo={newTodo} />
+
         {listTodos.map((e, index) => (
-          <Todo todo={e} clean={clean} id={index} edit={updateTodo} />
+          <Card card={e} clean={clean} id={index} edit={updateTodo} />
         ))}
       </div>
     </div>
