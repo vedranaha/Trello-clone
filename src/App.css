@@ -1,3 +1,35 @@
+.App {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  width: 80%;
+  margin: 50px auto 0;
+
+  background-color: rgb(91, 139, 151);
+
+  height: auto;
+  padding: 7px 10px 17px;
+  border: 1px solid rgb(69, 106, 116);
+  border-radius: 5%;
+  display: grid;
+  box-shadow: 10px 4px 5px rgba(0, 0, 0, 0.315);
+}
+
+.todo {
+  background-color: rgba(255, 255, 255, 0.459);
+  height: auto;
+  width: 270px;
+  padding: 8px;
+  margin: 10px 5px;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .form {
   width: 80%;
   margin: 60px auto 0;
@@ -18,16 +50,4 @@
   font-size: 20px;
   background-color: black;
   color: white;
-}
-
-.list {
-  width: 80%;
-  margin: 50px auto 0;
-}
-
-.todo {
-  font-size: 20px;
-  margin: 20px 0 15px 0;
-  display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
 }

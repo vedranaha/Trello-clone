@@ -28,14 +28,15 @@ const Todo = (props) => {
   return (
     <div>
       {!modoEdit ? (
-        <div className="Todo">
-          <div>{props.Todo}</div>
+        <div className="todo">
+          <div>{props.todo}</div>
           <button onClick={edit}>edit</button>
-          <button onClick={cleanTodo}>clean</button>
+          <button onClick={cleanTodo}>x</button>
         </div>
       ) : (
         <form className="formEdit" onSubmit={submitEdit}>
-          <input value={editText} onChange={manageEdit} /> <button>Save</button>
+          <input value={editText} onChange={manageEdit} />
+          {""} <button>Save</button>
         </form>
       )}
     </div>

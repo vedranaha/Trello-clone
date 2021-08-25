@@ -32,6 +32,7 @@ function App() {
       <TodoForm newTodo={newTodo} />
 
       <div className="list">
+        <header>Todo list</header>
         {listTodos.map((e, index) => (
           <Todo todo={e} clean={clean} id={index} edit={updateTodo} />
         ))}
