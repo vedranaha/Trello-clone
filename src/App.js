@@ -1,43 +1,32 @@
 import React, { useState } from "react";
-import TodoForm from "./components/Todoform";
 import Card from "./components/Card";
+import store from "./store";
+import StoreApi from "./StoreApi";
+import { v4 as uuid } from "uuid";
 import "./App.css";
 
-function App() {
-  const [listTodos, setListTodos] = useState([]);
+export default function App() {
+  const [data, setData] = useState(store);
 
-  const newTodo = (card) => {
-    setListTodos([card, ...listTodos]);
+  const addMoreCard = (title, listId) => {
+    console.log(title, listId);
   };
 
-  const clean = (id) => {
-    const listFiltered = listTodos.filter((e, index) => index !== id);
-    setListTodos(listFiltered);
-  };
-
-  const updateTodo = (id, card) => {
-    const listUpdated = listTodos.map((e, index) => {
-      if (index === id) {
-        e = card;
-      }
-
-      return e;
-    });
-
-    setListTodos(listUpdated);
+  const addMoreList = (title) => {
+    const newListId = uuid();
+    const newList = {
+      id: newListId,
+      title,
+      cards: [],
+    };
   };
 
   return (
-    <div className="App">
-      <div className="list">
-        <TodoForm newTodo={newTodo} />
-
-        {listTodos.map((e, index) => (
-          <Card card={e} clean={clean} id={index} edit={updateTodo} />
-        ))}
+    <StoreApi.Provider value={{ addMoreCard, addMoreList }}>
+      <div className="App">
+        {" "}
+        <div className="list"></div>
       </div>
-    </div>
+    </StoreApi.Provider>
   );
 }
-
-export default App;
