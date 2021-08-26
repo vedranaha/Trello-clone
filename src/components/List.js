@@ -5,8 +5,30 @@ import store from "../store";
 export default function List({ list, index, listId }) {
   const [data, setData] = useState(store);
 
+  //delete Card
   const deleteCard = (id, index) => {
+    const newListCards = data.lists[listId].cards.splice(index, 1);
+
+    console.log(listId);
+    console.log(index);
+
     const list = data.lists[listId];
+
+    const newState = {
+      ...data,
+      lists: {
+        ...data.lists,
+        [listId]: list,
+      },
+    };
+    setData(newState);
+  };
+
+  //Delete List
+  const deleteList = (index) => {
+    data.lists[listId].cards.splice(index);
+
+    console.log(listId);
 
     const newState = {
       ...data,
