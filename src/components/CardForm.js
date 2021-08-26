@@ -23,7 +23,7 @@ export default function CardForm({ setOpen, listId, type }) {
   return (
     <div className="containerCardForm">
       <div>
-        <Paper className="inputCard">
+        <Paper className="cardForm">
           <InputBase
             multiline
             autoFocus

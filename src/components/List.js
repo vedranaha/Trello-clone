@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import store from "../store";
-import CardForm from "./CardForm";
 import ContainerCardForm from "./ContainerCardForm";
 
 export default function List({ list, index, listId }) {
@@ -15,6 +14,7 @@ export default function List({ list, index, listId }) {
     console.log(index);
 
     const list = data.lists[listId];
+    const cards = data.lists[listId].cards;
 
     const newState = {
       ...data,
@@ -49,7 +49,7 @@ export default function List({ list, index, listId }) {
         <Card key={card.id} card={card} index={index} deleteCard={deleteCard} />
       ))}
       <div>
-        <ContainerCardForm listId={list.id} />
+        <ContainerCardForm listId={list.id} type="card" />
         <div className="XbtnList" onClick={() => deleteList(listId)}>
           Clean list
         </div>
