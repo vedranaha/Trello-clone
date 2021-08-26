@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from "./components/Card";
+import List from "./components/List";
 import store from "./store";
 import StoreApi from "./StoreApi";
 import { v4 as uuid } from "uuid";
@@ -24,8 +24,12 @@ export default function App() {
   return (
     <StoreApi.Provider value={{ addMoreCard, addMoreList }}>
       <div className="App">
-        {" "}
-        <div className="list"></div>
+        {data.listIds.map((listId, index) => {
+          const list = data.lists[listId];
+          return (
+            <List list={list} key={listId} index={index} listId={listId} />
+          );
+        })}
       </div>
     </StoreApi.Provider>
   );
