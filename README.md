@@ -1,8 +1,6 @@
-# REACT Trello clone - reto 3 GeeksHubs
+# REACT Trello clone - reto 3 GeeksHubs - Simple version of Trello in React.
 
-# # Simple version of Trello in React.
-
-# # Getting Started
+Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
