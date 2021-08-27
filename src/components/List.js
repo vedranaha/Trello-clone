@@ -27,7 +27,7 @@ export default function List({ list, index, listId }) {
     setData(newState);
   };
 
-  //Delete List
+  //Clean List
   const deleteList = (index) => {
     data.lists[listId].cards.splice(index);
 
@@ -69,7 +69,7 @@ export default function List({ list, index, listId }) {
               )}
             </Droppable>
             <div>
-              <ContainerCardForm listId={list.id} type="card" />
+              <ContainerCardForm listId={list.id} />
               <div className="XbtnList" onClick={() => deleteList(listId)}>
                 Clean list
               </div>
