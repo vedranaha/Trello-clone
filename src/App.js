@@ -51,6 +51,8 @@ export default function App() {
 
   return (
     <StoreApi.Provider value={{ addMoreCard, addMoreList }}>
+      {" "}
+      <h1>Trello clone </h1>
       <div className="App">
         {data.listIds.map((listId, index) => {
           const list = data.lists[listId];
@@ -58,7 +60,6 @@ export default function App() {
             <List list={list} key={listId} index={index} listId={listId} />
           );
         })}
-        <ContainerCardForm type="list" />
       </div>
     </StoreApi.Provider>
   );

@@ -44,7 +44,7 @@ export default function List({ list, index, listId }) {
 
   return (
     <div className="list">
-      <h1 className="listTitle">{list.title} </h1>
+      <h2 className="listTitle">{list.title} </h2>
       {list.cards.map((card, index) => (
         <Card key={card.id} card={card} index={index} deleteCard={deleteCard} />
       ))}

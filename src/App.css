@@ -1,50 +1,105 @@
 .App {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: rgba(59, 49, 49, 0.945);
+}
+h1 {
+  margin-top: 60px;
+  background-color: rgb(44, 86, 97);
+  border: 1px solid rgb(45, 80, 88);
+  color: rgb(238, 212, 212);
+  text-align: center;
+  height: 70%;
 }
 
 .list {
   width: auto;
-  margin: 50px auto 0;
-
-  background-color: rgb(56, 90, 99);
-
+  background-color: rgba(204, 152, 122, 0.904);
   height: auto;
   padding: 7px 10px 17px;
-  border: 1px solid rgb(69, 106, 116);
+  border: 1px solid rgb(110, 168, 184);
   border-radius: 5%;
   display: grid;
-  box-shadow: 10px 4px 5px rgba(0, 0, 0, 0.315);
+  box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.315);
 }
 
 .task {
   background-color: rgba(248, 221, 221, 0.459);
-  color: rgb(119, 29, 29);
+  color: rgb(48, 11, 11);
   height: auto;
-  width: 270px;
-  padding: 8px;
+  width: auto;
+  padding: 5px;
   margin: 10px 5px;
-  border-radius: 10px;
-  font-size: 1.7rem;
+  border-radius: 5px;
+  font-size: 1.3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .Xbtn {
-  background-color: rgba(255, 255, 255, 0.246);
-
-  margin: 2px;
-  padding: 2px;
+  background-color: rgba(255, 255, 255, 0.103);
+  margin: 4px;
   text-align: center;
   cursor: pointer;
 }
 .Xbtn:hover {
-  background-color: rgba(20, 20, 20, 0.103);
   color: white;
+}
+.XbtnList {
+  background-color: rgba(199, 137, 118, 0.972);
+  color: rgba(255, 255, 255, 0.836);
+  border: 1px solid rgba(199, 137, 118, 0.972);
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 50%;
+  height: 30%;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 4px 2px 3px rgba(0, 0, 0, 0.315);
+  cursor: pointer;
+  font-weight: bold;
+}
+.XbtnList:hover {
+  background-color: rgb(248, 160, 138);
+  color: rgba(221, 60, 11, 0.972);
 }
 .listTitle {
   margin: 10px;
+  color: rgb(59, 26, 4);
+  height: 40px;
+}
+.containerCardForm {
+  background-color: rgba(138, 192, 194, 0.568);
+  margin-top: 10px;
+  margin-left: 4px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.315);
+}
+.CardForm {
+  margin-top: 15px;
+  margin-left: 5px;
+  width: auto;
+  height: auto;
+}
+.btnAdd {
+  background-color: rgba(176, 184, 185, 0.808);
+  color: rgb(44, 44, 44);
+  width: auto;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 4px 2px 3px rgba(0, 0, 0, 0.315);
+  cursor: pointer;
+  font-weight: bold;
+}
+.btnAdd:hover {
+  background-color: rgba(146, 108, 83, 0.719);
   color: white;
 }
